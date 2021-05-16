@@ -1,0 +1,41 @@
+
+
+    <h4>Add Employee</h4>
+
+      <div class="row">
+     <div class="col-lg-4 " *ngFor="let work of workList">
+       <div class="card card-style">
+         <div class="card-body">
+          <h5  class="card-i card-text-style"> Title : <span>{{work.title}}</span> </h5>
+          <h5  class="card-i card-text-style"> Employer : <span>{{work.employer}}</span> </h5>
+          <h5 class="card-i card-text-style"> Location : <span>{{work.location}}</span> </h5>
+          <h5 class="card-i card-text-style"> Skill Required : <span>{{work.skill_req}}</span> </h5>
+          <h5 class="card-i card-text-style"> Duration : <span>{{work.duration}}</span> </h5>
+          <h5 class="card-i card-text-style"> Date : <span>{{work.start_dt | date}} to {{work.end_dt | date}}</span> </h5>
+          <h5 class="card-i card-text-style"> Worker Required : <span>{{work.worker_req}}</span> </h5>
+          <h5 class="card-i card-text-style"> Payment : <span>{{work.payment}}</span> </h5>
+          <h6 class="card-i card-text-style" >isActive  : <span>{{work.isActive}}</span></h6> 
+         </div>
+         <div class="card-footer">
+          <mat-form-field>
+            <mat-label>Employee</mat-label>
+            <mat-select #user multiple >
+              <mat-option *ngFor="let app of docs" [value]="app.employee_id._id">
+                {{app.employee_id.name}}
+              </mat-option>
+            </mat-select>
+          </mat-form-field>
+
+          <button mat-raised-button  color="success" (click)="appliedwork(work._id)" class="login-button"type="submit">Applied user</button>
+          <button mat-raised-button  color="primary" (click)="assignWork(user.value,work._id)" class="login-button"type="submit">Assign</button>
+      
+         </div>
+       </div>
+     </div>
+
+   </div>
+
+
+
+
+

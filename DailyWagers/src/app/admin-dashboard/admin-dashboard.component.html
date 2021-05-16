@@ -1,0 +1,33 @@
+<app-header></app-header>
+<div class="container-fluid">
+    <div class="row">
+    <div class="col-3">
+<div class="sidebar">
+    <h2>Admin Dashboard</h2>
+<ul>
+    
+    <li>
+        <a href="#" routerLink="/admin/home"><li class="">Home</li></a>
+    </li>
+    <li>Employees</li>
+    <a href="#" routerLink="/admin/Add-Employee"><li class="drop">Assign Work</li></a>
+    <a href="#" routerLink="/admin/Employee-list"><li class="drop">Employees List</li></a>
+ 
+
+   <li>Employers</li>
+  <a href="#" routerLink="/admin/Add-Employer"><li class="drop">Add Employers</li></a>
+  <a href="#" routerLink="/admin/Employer-list"><li class="drop">Employer List</li></a>
+
+    <li>Work Requirement</li>
+    <a href="#" routerLink="/admin/Add-WorkReq"><li class="drop">Add Work Requirement</li></a>
+    <a href="#" routerLink="/admin/WorkReq-List"><li class="drop">Work Requirement list</li></a>
+  
+</ul>
+</div>
+</div>
+<div class="col-8" style="margin-top: 66px;">
+  
+<router-outlet></router-outlet>
+</div>
+</div>
+</div>

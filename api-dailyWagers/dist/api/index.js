@@ -1,0 +1,36 @@
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.restRouter = void 0;
+
+var _express = _interopRequireDefault(require("express"));
+
+var _user = require("./resources/users/user.router");
+
+var _registration = require("./resources/registration/registration.router");
+
+var _requirement = require("./resources/requirement/requirement.router");
+
+var _skills = require("./resources/skills/skills.router");
+
+var _employer = require("./resources/Employer/employer.router");
+
+var _application = require("./resources/applications/application.router");
+
+var _work = require("./resources/WorkMapping/work.router");
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
+
+var restRouter = _express["default"].Router();
+
+exports.restRouter = restRouter;
+restRouter.use('/user', _user.userRouter);
+restRouter.use('/employee', _registration.registrationRouter);
+restRouter.use('/req', _requirement.requireRouter);
+restRouter.use('/skills', _skills.skillsRouter);
+restRouter.use('/employer', _employer.employerRouter);
+restRouter.use('/application', _application.applicationRouter);
+restRouter.use('/workmap', _work.workRouter);
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi4uLy4uL3NyYy9hcGkvaW5kZXguanMiXSwibmFtZXMiOlsicmVzdFJvdXRlciIsImV4cHJlc3MiLCJSb3V0ZXIiLCJ1c2UiLCJ1c2VyUm91dGVyIiwicmVnaXN0cmF0aW9uUm91dGVyIiwicmVxdWlyZVJvdXRlciIsInNraWxsc1JvdXRlciIsImVtcGxveWVyUm91dGVyIiwiYXBwbGljYXRpb25Sb3V0ZXIiLCJ3b3JrUm91dGVyIl0sIm1hcHBpbmdzIjoiOzs7Ozs7O0FBQUE7O0FBQ0E7O0FBQ0E7O0FBQ0E7O0FBQ0E7O0FBQ0E7O0FBQ0E7O0FBQ0E7Ozs7QUFDTyxJQUFNQSxVQUFVLEdBQUdDLG9CQUFRQyxNQUFSLEVBQW5COzs7QUFDUEYsVUFBVSxDQUFDRyxHQUFYLENBQWUsT0FBZixFQUF1QkMsZ0JBQXZCO0FBQ0FKLFVBQVUsQ0FBQ0csR0FBWCxDQUFlLFdBQWYsRUFBMkJFLGdDQUEzQjtBQUNBTCxVQUFVLENBQUNHLEdBQVgsQ0FBZSxNQUFmLEVBQXNCRywwQkFBdEI7QUFDQU4sVUFBVSxDQUFDRyxHQUFYLENBQWUsU0FBZixFQUF5Qkksb0JBQXpCO0FBQ0FQLFVBQVUsQ0FBQ0csR0FBWCxDQUFlLFdBQWYsRUFBMkJLLHdCQUEzQjtBQUNBUixVQUFVLENBQUNHLEdBQVgsQ0FBZSxjQUFmLEVBQThCTSw4QkFBOUI7QUFDQVQsVUFBVSxDQUFDRyxHQUFYLENBQWUsVUFBZixFQUEwQk8sZ0JBQTFCIiwic291cmNlc0NvbnRlbnQiOlsiaW1wb3J0IGV4cHJlc3MgZnJvbSAnZXhwcmVzcyc7XHJcbmltcG9ydCB7IHVzZXJSb3V0ZXIgfSBmcm9tICcuL3Jlc291cmNlcy91c2Vycy91c2VyLnJvdXRlcic7XHJcbmltcG9ydCB7IHJlZ2lzdHJhdGlvblJvdXRlciB9IGZyb20gJy4vcmVzb3VyY2VzL3JlZ2lzdHJhdGlvbi9yZWdpc3RyYXRpb24ucm91dGVyJztcclxuaW1wb3J0IHsgcmVxdWlyZVJvdXRlciB9IGZyb20gJy4vcmVzb3VyY2VzL3JlcXVpcmVtZW50L3JlcXVpcmVtZW50LnJvdXRlcic7XHJcbmltcG9ydCB7c2tpbGxzUm91dGVyfSBmcm9tICcuL3Jlc291cmNlcy9za2lsbHMvc2tpbGxzLnJvdXRlcic7XHJcbmltcG9ydCB7IGVtcGxveWVyUm91dGVyIH0gZnJvbSAnLi9yZXNvdXJjZXMvRW1wbG95ZXIvZW1wbG95ZXIucm91dGVyJztcclxuaW1wb3J0IHsgYXBwbGljYXRpb25Sb3V0ZXIgfSBmcm9tICcuL3Jlc291cmNlcy9hcHBsaWNhdGlvbnMvYXBwbGljYXRpb24ucm91dGVyJztcclxuaW1wb3J0IHsgd29ya1JvdXRlcn0gZnJvbSAnLi9yZXNvdXJjZXMvV29ya01hcHBpbmcvd29yay5yb3V0ZXInO1xyXG5leHBvcnQgY29uc3QgcmVzdFJvdXRlciA9IGV4cHJlc3MuUm91dGVyKCk7XHJcbnJlc3RSb3V0ZXIudXNlKCcvdXNlcicsdXNlclJvdXRlcik7XHJcbnJlc3RSb3V0ZXIudXNlKCcvZW1wbG95ZWUnLHJlZ2lzdHJhdGlvblJvdXRlcik7XHJcbnJlc3RSb3V0ZXIudXNlKCcvcmVxJyxyZXF1aXJlUm91dGVyKTtcclxucmVzdFJvdXRlci51c2UoJy9za2lsbHMnLHNraWxsc1JvdXRlcik7XHJcbnJlc3RSb3V0ZXIudXNlKCcvZW1wbG95ZXInLGVtcGxveWVyUm91dGVyKTtcclxucmVzdFJvdXRlci51c2UoJy9hcHBsaWNhdGlvbicsYXBwbGljYXRpb25Sb3V0ZXIpO1xyXG5yZXN0Um91dGVyLnVzZSgnL3dvcmttYXAnLHdvcmtSb3V0ZXIpOyJdfQ==

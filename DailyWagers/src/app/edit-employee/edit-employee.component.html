@@ -1,0 +1,110 @@
+<div class="container text-center" style="margin-top: 2%;">
+    <h2>Update Employee</h2>
+<form class="form-container"   *ngFor="let item of currentemployee" (ngSubmit)=" editEmployees()" novalidate  [formGroup]="profileForm" >   
+	<div class="row">
+		<div class="col-lg-4 col-md-5 col-sm-12">
+            <mat-form-field>
+                <mat-label>Full name</mat-label>
+                <input matInput [(ngModel)]="item.name" formControlName="name">
+              </mat-form-field>
+    </div>
+
+    <div class="col-lg-5 col-md-5 col-sm-12">
+        <mat-form-field appearance="fill">
+            <mat-label>DOB</mat-label>
+            <input matInput [matDatepicker]="picker" [(ngModel)]="item.dob" formControlName="dob">
+            <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+            <mat-datepicker #picker></mat-datepicker>
+          </mat-form-field>
+    </div>
+  </div>
+    <div class="row">
+        <div class="col-lg-4 col-md-5 col-sm-12">
+            <mat-form-field>
+                <input
+                matInput
+                placeholder="Contact"
+                type="number"
+                required
+                minlength="10" [(ngModel)]="item.contact"
+                formControlName="contact"
+                >
+               
+              </mat-form-field>
+        </div>
+        <div class="col-lg-4 col-md-5 col-sm-12">
+            <mat-form-field>
+                <mat-label>Experience(in yrs)</mat-label>
+                <input matInput [(ngModel)]="item.experience" formControlName="experience">
+              </mat-form-field>
+        </div>
+        
+    </div>
+    <div class="row">
+		<div class="col-lg-4 col-md-5 col-sm-12">
+            <mat-form-field>
+                <mat-label>Email</mat-label>
+                <input matInput [(ngModel)]="item.email" formControlName="email">
+              </mat-form-field>
+        </div>
+        <div class="col-lg-4 col-md-5 col-sm-12">
+            <mat-form-field>
+                <mat-label>state</mat-label>
+                <input matInput [(ngModel)]="item.State" formControlName="State">
+              </mat-form-field>
+        </div>
+		
+       
+    </div>
+    <div class="row">
+    
+        <div class="col-lg-4 col-md-5 col-sm-12">
+            <mat-form-field>
+                <mat-label>Address</mat-label>
+                <input matInput [(ngModel)]="item.address" formControlName="address">
+              </mat-form-field>
+        </div>
+        <div class="col-lg-4 col-md-5 col-sm-12">
+            <mat-form-field>
+                <mat-label>city</mat-label>
+                <input matInput [(ngModel)]="item.city" formControlName="city">
+              </mat-form-field>
+             
+             
+		</div>
+    </div>
+    
+    <div class="row">
+    
+        <div class="col-lg-4 col-md-5 col-sm-12">
+            <mat-form-field >
+                <mat-label>Skill</mat-label>
+                    <mat-select  [(ngModel)]="item.skill_req" formControlName="skill_req">
+                        <mat-option *ngFor="let skill of skillList" [value]="skill.name">
+                            {{skill.name}}
+                          </mat-option>
+                        </mat-select>
+                      </mat-form-field>
+        </div>
+      
+        <div class="col-lg-4 col-md-5 col-sm-12">
+            <label>isActive</label>
+                  <select [(ngModel)]="item.isActive" formControlName="isActive" >
+                      <option>True </option>
+                      <option>False </option>
+                  </select>
+               
+               
+          </div>
+    </div>
+ 
+    <button
+    mat-raised-button
+    color="primary"
+    class="login-button"
+    type="submit">
+    Edit
+  </button>
+    </form>
+
+</div>

@@ -1,0 +1,19 @@
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.requireRouter = void 0;
+
+var _requirement = _interopRequireDefault(require("./requirement.controller"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
+
+var express = require('express');
+
+var requireRouter = express.Router();
+exports.requireRouter = requireRouter;
+requireRouter.route('/').get(_requirement["default"].findAll);
+requireRouter.route('/').post(_requirement["default"].create);
+requireRouter.route('/:id').put(_requirement["default"].update)["delete"](_requirement["default"]["delete"]).get(_requirement["default"].findOne);
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi4uLy4uLy4uLy4uL3NyYy9hcGkvcmVzb3VyY2VzL3JlcXVpcmVtZW50L3JlcXVpcmVtZW50LnJvdXRlci5qcyJdLCJuYW1lcyI6WyJleHByZXNzIiwicmVxdWlyZSIsInJlcXVpcmVSb3V0ZXIiLCJSb3V0ZXIiLCJyb3V0ZSIsImdldCIsInJlcXVpcmVtZW50Q29udHJvbGxlciIsImZpbmRBbGwiLCJwb3N0IiwiY3JlYXRlIiwicHV0IiwidXBkYXRlIiwiZmluZE9uZSJdLCJtYXBwaW5ncyI6Ijs7Ozs7OztBQUVBOzs7O0FBRkEsSUFBTUEsT0FBTyxHQUFHQyxPQUFPLENBQUMsU0FBRCxDQUF2Qjs7QUFJTyxJQUFNQyxhQUFhLEdBQUdGLE9BQU8sQ0FBQ0csTUFBUixFQUF0Qjs7QUFDUEQsYUFBYSxDQUFDRSxLQUFkLENBQW9CLEdBQXBCLEVBQXlCQyxHQUF6QixDQUE2QkMsd0JBQXNCQyxPQUFuRDtBQUNBTCxhQUFhLENBQUNFLEtBQWQsQ0FBb0IsR0FBcEIsRUFBeUJJLElBQXpCLENBQThCRix3QkFBc0JHLE1BQXBEO0FBQ0FQLGFBQWEsQ0FBQ0UsS0FBZCxDQUFvQixNQUFwQixFQUNDTSxHQURELENBQ0tKLHdCQUFzQkssTUFEM0IsWUFFUUwsaUNBRlIsRUFHQ0QsR0FIRCxDQUdLQyx3QkFBc0JNLE9BSDNCIiwic291cmNlc0NvbnRlbnQiOlsiY29uc3QgZXhwcmVzcyA9IHJlcXVpcmUoJ2V4cHJlc3MnKTtcclxuXHJcbmltcG9ydCByZXF1aXJlbWVudENvbnRyb2xsZXIgZnJvbSAnLi9yZXF1aXJlbWVudC5jb250cm9sbGVyJztcclxuXHJcbmV4cG9ydCBjb25zdCByZXF1aXJlUm91dGVyID0gZXhwcmVzcy5Sb3V0ZXIoKTtcclxucmVxdWlyZVJvdXRlci5yb3V0ZSgnLycpLmdldChyZXF1aXJlbWVudENvbnRyb2xsZXIuZmluZEFsbCk7XHJcbnJlcXVpcmVSb3V0ZXIucm91dGUoJy8nKS5wb3N0KHJlcXVpcmVtZW50Q29udHJvbGxlci5jcmVhdGUpO1xyXG5yZXF1aXJlUm91dGVyLnJvdXRlKCcvOmlkJylcclxuLnB1dChyZXF1aXJlbWVudENvbnRyb2xsZXIudXBkYXRlKVxyXG4uZGVsZXRlKHJlcXVpcmVtZW50Q29udHJvbGxlci5kZWxldGUpXHJcbi5nZXQocmVxdWlyZW1lbnRDb250cm9sbGVyLmZpbmRPbmUpOyJdfQ==

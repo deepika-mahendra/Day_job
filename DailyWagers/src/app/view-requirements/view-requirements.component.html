@@ -1,0 +1,31 @@
+<form >
+<div class="row">
+  
+    <div class="col-lg-3 col-md-4 col-sm-4 col-xs-6 "  style="margin-top: 1%;" *ngFor="let item of workList" >
+        <div class="card card-style animated zoomIn " > 
+          <img class="card-img-top card-img-style card-hover card-img" src="{{item.url}}"  alt="Card image" >
+          <div class="card-body">
+                <h6 class="card-i card-text-style" >Title : <span>{{item.title}}</span></h6> 
+                <h6 class="card-i card-text-style" >Description :<span> {{item.description}}</span></h6> 
+                <h6 class="card-i card-text-style" >Benifits : <span>{{item.benifits}}</span></h6> 
+                <h6 class="card-i card-text-style" >Location : <span>{{item.location}}</span></h6> 
+                <h6 class="card-i card-text-style" >Skill Required : <span>{{item.skill_req}}</span></h6> 
+                <h6 class="card-i card-text-style" >Post Available : <span>{{item.worker_req}}</span></h6> 
+                <h6 class="card-i card-text-style" >Duration  : <span>{{item.duration}}</span></h6> 
+                <h6 class="card-i card-text-style" >Date  : <span>{{item.start_dt | date}}</span> To <span>{{item.end_dt | date}}</span></h6> 
+                <h6 class="card-i card-text-style" >Payment (per day)  : <span>{{item.payment}}</span></h6>   
+               
+              
+          </div>
+          <button
+                  mat-raised-button
+                  color="primary"
+                  class="login-button" (click)="apply(item,$event)" type="button">
+                  Apply
+                </button>
+              </div>
+            </div>
+             
+        
+    </div>
+</form>

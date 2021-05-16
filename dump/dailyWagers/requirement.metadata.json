@@ -1,0 +1,1 @@
+{"options":{},"indexes":[{"v":{"$numberInt":"2"},"key":{"_id":{"$numberInt":"1"}},"name":"_id_","ns":"dailyWagers.requirement"}],"uuid":"0d2ff84d51e4436cba6d5b274680f34b"}

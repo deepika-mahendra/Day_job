@@ -1,0 +1,118 @@
+
+<div class="login-page">
+  <mat-card >
+    <mat-card-title style="text-align:center;">SignIn/SignUp</mat-card-title>
+    <mat-tab-group mat-stretch-tabs class="example-stretched-tabs">
+      <mat-tab label="Login">
+          <mat-card-content>
+            <form class="form-container"   (ngSubmit)="login()" novalidate [formGroup]="loginForm">
+               <mat-form-field>
+                <input
+                  matInput
+                  placeholder="Email"
+                  formControlName="email"
+                  >
+                  <mat-error *ngIf="signupForm.controls.email.invalid">Email is required</mat-error>
+                <mat-icon matSuffix>email</mat-icon>
+              </mat-form-field>
+              <mat-form-field>
+                <input
+                  matInput
+                  placeholder="Password"
+                  type="password"
+                  minlength="6"
+                  formControlName="password"
+                 >
+                  <mat-error
+                    *ngIf="signupForm.controls.password.errors && signupForm.controls.password.errors.required">
+                    Password is required
+                  </mat-error>
+                  <mat-error
+                    *ngIf="signupForm.controls.password.errors && signupForm.controls.password.errors.minlength">
+                    Password must be of length 6
+                  </mat-error>
+                <mat-icon matSuffix>lock</mat-icon>
+              </mat-form-field>
+              <mat-checkbox>Remember Me!</mat-checkbox> 
+              <button
+                mat-raised-button
+                color="primary"
+                class="login-button" type="submit">
+                Sign In
+              </button>
+
+             
+            </form>
+          </mat-card-content>
+      </mat-tab>
+      <mat-tab label="Sign Up" >
+        <mat-card-content>
+          <form  class="form-container" (ngSubmit)="signup()" novalidate [formGroup]="signupForm" >
+            <mat-form-field >
+              <input  matInput placeholder="User Name"    formControlName="name" > 
+              <mat-icon matSuffix>perm_identity</mat-icon>
+              <mat-error
+              *ngIf="signupForm.controls.name.invalid">
+              Username is required
+            </mat-error>
+
+            </mat-form-field>
+         
+          <mat-form-field>
+              <input  matInput  placeholder="Email"  formControlName="email"  >
+              
+              <mat-error *ngIf="signupForm.controls.email.invalid">Email is required</mat-error>
+              <mat-icon matSuffix>email</mat-icon>
+            </mat-form-field>
+            <mat-form-field>
+              <input  matInput placeholder="Password"  type="password"   minlength="6" formControlName="password"  >
+              <mat-error
+              *ngIf="signupForm.controls.password.errors && signupForm.controls.password.errors.minlength">
+              Password must be of length 6
+            </mat-error>
+               
+              <mat-icon matSuffix>lock</mat-icon>
+
+            </mat-form-field>
+            <!-- <mat-form-field>
+              <input
+              matInput
+              placeholder="Confirm Password"
+              type="password"
+              minlength="6"
+              formControlName="confirmPassword"
+              >
+              <mat-error
+              *ngIf="signupForm.controls.repassword.errors && signupForm.controls.repassword.errors.required">
+              Re-Enter Password is required
+            </mat-error>
+            <mat-icon matSuffix>lock</mat-icon>
+          </mat-form-field> -->
+          <mat-form-field>
+            <input
+            matInput
+            placeholder="Contact"
+            type="number"
+            required
+            minlength="10"
+            maxlength="10"
+           
+            formControlName="contact"
+            >
+           
+            <mat-icon matSuffix> settings_phone </mat-icon>
+        </mat-form-field>
+          
+
+            <button
+              mat-raised-button
+              color="primary"
+              class="login-button" type="submit">
+              Sign Up
+            </button>
+          </form>
+        </mat-card-content>
+      </mat-tab>
+    </mat-tab-group>
+  </mat-card>
+</div>

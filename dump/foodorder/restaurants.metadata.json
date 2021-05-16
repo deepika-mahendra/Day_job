@@ -1,0 +1,1 @@
+{"options":{},"indexes":[{"v":{"$numberInt":"2"},"key":{"_id":{"$numberInt":"1"}},"name":"_id_","ns":"foodorder.restaurants"},{"v":{"$numberInt":"2"},"unique":true,"key":{"contact":{"$numberInt":"1"}},"name":"contact_1","ns":"foodorder.restaurants","background":true}],"uuid":"b40349666e0241a1934435b87d2f5dc5"}

@@ -1,0 +1,19 @@
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.skillsRouter = void 0;
+
+var _skills = _interopRequireDefault(require("./skills.controller"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
+
+var express = require('express');
+
+var skillsRouter = express.Router();
+exports.skillsRouter = skillsRouter;
+skillsRouter.route('/').get(_skills["default"].findAll);
+skillsRouter.route('/').post(_skills["default"].create);
+skillsRouter.route('/:id').put(_skills["default"].update)["delete"](_skills["default"]["delete"]).get(_skills["default"].findOne);
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi4uLy4uLy4uLy4uL3NyYy9hcGkvcmVzb3VyY2VzL3NraWxscy9za2lsbHMucm91dGVyLmpzIl0sIm5hbWVzIjpbImV4cHJlc3MiLCJyZXF1aXJlIiwic2tpbGxzUm91dGVyIiwiUm91dGVyIiwicm91dGUiLCJnZXQiLCJza2lsbHNDb250cm9sbGVyIiwiZmluZEFsbCIsInBvc3QiLCJjcmVhdGUiLCJwdXQiLCJ1cGRhdGUiLCJmaW5kT25lIl0sIm1hcHBpbmdzIjoiOzs7Ozs7O0FBRUE7Ozs7QUFGQSxJQUFNQSxPQUFPLEdBQUdDLE9BQU8sQ0FBQyxTQUFELENBQXZCOztBQUlPLElBQU1DLFlBQVksR0FBR0YsT0FBTyxDQUFDRyxNQUFSLEVBQXJCOztBQUNQRCxZQUFZLENBQUNFLEtBQWIsQ0FBbUIsR0FBbkIsRUFBd0JDLEdBQXhCLENBQTRCQyxtQkFBaUJDLE9BQTdDO0FBQ0FMLFlBQVksQ0FBQ0UsS0FBYixDQUFtQixHQUFuQixFQUF3QkksSUFBeEIsQ0FBNkJGLG1CQUFpQkcsTUFBOUM7QUFDQVAsWUFBWSxDQUFDRSxLQUFiLENBQW1CLE1BQW5CLEVBQ0NNLEdBREQsQ0FDS0osbUJBQWlCSyxNQUR0QixZQUVRTCw0QkFGUixFQUdDRCxHQUhELENBR0tDLG1CQUFpQk0sT0FIdEIiLCJzb3VyY2VzQ29udGVudCI6WyJjb25zdCBleHByZXNzID0gcmVxdWlyZSgnZXhwcmVzcycpO1xyXG5cclxuaW1wb3J0IHNraWxsc0NvbnRyb2xsZXIgZnJvbSAnLi9za2lsbHMuY29udHJvbGxlcic7XHJcblxyXG5leHBvcnQgY29uc3Qgc2tpbGxzUm91dGVyID0gZXhwcmVzcy5Sb3V0ZXIoKTtcclxuc2tpbGxzUm91dGVyLnJvdXRlKCcvJykuZ2V0KHNraWxsc0NvbnRyb2xsZXIuZmluZEFsbCk7XHJcbnNraWxsc1JvdXRlci5yb3V0ZSgnLycpLnBvc3Qoc2tpbGxzQ29udHJvbGxlci5jcmVhdGUpO1xyXG5za2lsbHNSb3V0ZXIucm91dGUoJy86aWQnKVxyXG4ucHV0KHNraWxsc0NvbnRyb2xsZXIudXBkYXRlKVxyXG4uZGVsZXRlKHNraWxsc0NvbnRyb2xsZXIuZGVsZXRlKVxyXG4uZ2V0KHNraWxsc0NvbnRyb2xsZXIuZmluZE9uZSk7Il19

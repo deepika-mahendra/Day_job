@@ -1,0 +1,71 @@
+  
+  <div class="example-container mat-elevation-z8">
+    <table mat-table [dataSource]="dataSource">
+      <ng-container matColumnDef="actions" sticky>
+        <th mat-header-cell *matHeaderCellDef> Actions </th>
+        <td mat-cell *matCellDef="let element">  <button mat-button (click)="update(element)" >Edit</button> </td>
+      </ng-container>
+      <!-- <ng-container matColumnDef="actions">
+        <th mat-header-cell > Actions </mat-header-cell>
+        <mat-cell *matCellDef="let row" >
+             <button mat-button >Edit</button>
+        </mat-cell>
+      </ng-container> -->
+      <!-- Name Column -->
+      <ng-container matColumnDef="name" sticky>
+        <th mat-header-cell *matHeaderCellDef> Name </th>
+        <td mat-cell *matCellDef="let element"> {{element.name}} </td>
+      </ng-container>
+  
+      <!-- Position Column -->
+      <ng-container matColumnDef="skill_req">
+        <th mat-header-cell *matHeaderCellDef>skills </th>
+        <td mat-cell *matCellDef="let element"> {{element.skill_req}} </td>
+      </ng-container>
+  
+      <!-- Weight Column -->
+      <ng-container matColumnDef="experience">
+        <th mat-header-cell *matHeaderCellDef> experience </th>
+        <td mat-cell *matCellDef="let element"> {{element.experience}} </td>
+      </ng-container>
+  
+      <!-- Symbol Column -->
+      <ng-container matColumnDef="email">
+        <th mat-header-cell *matHeaderCellDef> email </th>
+        <td mat-cell *matCellDef="let element"> {{element.email}} </td>
+      </ng-container>
+  
+      <!-- Star Column -->
+      
+      <!-- Symbol Column -->
+      <ng-container matColumnDef="city">name
+        <th mat-header-cell *matHeaderCellDef> city </th>
+        <td mat-cell *matCellDef="let element"> {{element.city}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="contact">
+        <th mat-header-cell *matHeaderCellDef> contact </th>
+        <td mat-cell *matCellDef="let element"> {{element.contact}} </td>
+      </ng-container>
+  
+      <ng-container matColumnDef="gender">
+        <th mat-header-cell *matHeaderCellDef> Gender </th>
+        <td mat-cell *matCellDef="let element"> {{element.gender}} </td>
+      </ng-container>
+      <ng-container matColumnDef="isActive">
+        <th mat-header-cell *matHeaderCellDef> isActive </th>
+        <td mat-cell *matCellDef="let element"> {{element.isActive}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="star" stickyEnd>
+        <th mat-header-cell *matHeaderCellDef></th>
+        <td mat-cell *matCellDef="let element">
+          <mat-icon>more_vert</mat-icon>
+        </td>
+      </ng-container>
+  
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+   
+    </table>
+  </div>

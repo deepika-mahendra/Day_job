@@ -1,0 +1,1 @@
+{"options":{},"indexes":[{"v":{"$numberInt":"2"},"key":{"_id":{"$numberInt":"1"}},"name":"_id_","ns":"stud.department"}],"uuid":"a3901bbcdacd48bbaf40ca48b1e89b17"}
